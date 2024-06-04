@@ -1,0 +1,35 @@
+<ul>
+    <li *ngFor="let drug of drugs">
+      <a routerLink="/drug/{{drug.id}}">
+        <img [src]="drug.imageUrl" [alt]="drug.name" />
+        <div class="content">
+          <div class="name">
+            {{drug.name}}
+          </div>
+          <span class="favorite {{drug.favorite?'':'not'}}">❤
+          </span>
+          <div class="stars">
+
+          </div>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of drug.origins">
+              {{origin}}
+            </span>
+          </div>
+
+          <div class="dosage">
+            <span>🕒</span>
+            {{drug.dosage}}
+          </div>
+        </div>
+
+        <div class="price">
+          <span>
+            {{drug.price | currency}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

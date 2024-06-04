@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=https://odcmaster2.github.io/pharmacystore/"
-
   },
   "private": true,
   "dependencies": {
