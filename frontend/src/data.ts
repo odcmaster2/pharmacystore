@@ -1,4 +1,5 @@
 import { Drug } from "./app/shared/models/Drug";
+import { Tag } from "./app/shared/models/Tag";
 
 export const sample_drugs: Drug[] = [
     {
@@ -67,4 +68,18 @@ export const sample_drugs: Drug[] = [
         imageUrl: 'assets/6.jpg',
         tags: ['Hpv', 'Uterus'],
       },
+]
+
+export const sample_tags:Tag[] = [
+  { name:'Stomach', count: 1},
+  { name:'Digest', count: 1},
+  { name:'Vomit', count: 1},
+  { name:'Sleep', count: 3},
+  { name:'Relax', count: 2},
+  { name:'Melatonin', count: 2},
+  { name:'Calm', count: 1},
+  { name:'Cholesterol', count: 1},
+  { name:'Heart', count: 1},
+  { name:'Hpv', count: 1},
+  { name:'Uterus', count: 1},
 ]
