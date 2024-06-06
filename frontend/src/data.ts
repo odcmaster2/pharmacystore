@@ -66,5 +66,5 @@ export const sample_drugs: Drug[] = [
         stars: 4.0,
         imageUrl: 'assets/6.jpg',
         tags: ['Hpv', 'Uterus'],
-      }
+      },
 ]

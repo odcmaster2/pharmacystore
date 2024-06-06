@@ -14,8 +14,8 @@
           </div>
         <div class="product-item-footer">
           <div class="origins">
-            <span *ngFor="let origin of drug.origins">
-              {{origin}}
+            <span>
+              {{drug.origins}}
             </span>
           </div>
 
@@ -27,7 +27,7 @@
 
         <div class="price">
           <span>
-            {{drug.price | currency}}
+            {{drug.price | currency: 'EUR'}}
           </span>
         </div>
       </div>
