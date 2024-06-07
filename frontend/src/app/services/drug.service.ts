@@ -28,4 +28,8 @@ export class DrugService {
     this.getAll():
     this.getAll().filter(drug => drug.tags?.includes(tag));
   }
+
+  getDrugById(drugId:string):Drug{
+    return this.getAll().find(drug => drug.id == drugId) ?? new Drug();
+  }
 }

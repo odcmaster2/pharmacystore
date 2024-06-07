@@ -1,0 +1,39 @@
+<div class="container">
+    <img [src]="drug.imageUrl" [alt]="drug.name"/>
+
+    <div class="details">
+        <div class="header">
+          <span class="name">
+            {{drug.name}}
+          </span>
+          <span class="favorite {{drug.favorite? '': 'not'}}">❤</span>
+        </div>
+
+        <div class="origins">
+              {{drug.origins}}
+          </div>
+
+          <div class="tags">
+            <a *ngFor="let tag of drug.tags" routerLink="/tag/{{tag}}">
+              {{tag}}
+            </a>
+          </div>
+
+          <div class="dosage">
+            <span>
+              Time to take your medicine about <strong>{{drug.dosage}}</strong> times per day
+            </span>
+          </div>
+      
+          <div class="price">
+            <span>
+              {{drug.price | currency: 'EUR'}}
+            </span>
+        </div>
+
+        <button>Add To Cart</button>
+     </div>
+</div>
+
+
+
