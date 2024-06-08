@@ -4,11 +4,12 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { DrugService } from '../../../services/drug.service';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../../services/cart.service';
+import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 
 @Component({
   selector: 'app-drug-page',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,NotFoundComponent],
   templateUrl: './drug-page.component.html',
   styleUrl: './drug-page.component.css'
 })

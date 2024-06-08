@@ -1,5 +1,9 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found
+[visible]="!drugs || !drugs.length"
+resetLinkText="Reset Search">
+</app-not-found>
 <ul>
     <li *ngFor="let drug of drugs">
       <a routerLink="/drug/{{drug.id}}">
