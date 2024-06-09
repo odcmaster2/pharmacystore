@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from '../../partials/search/search.component';
 import { TagsComponent } from '../../partials/tags/tags.component';
 import { NotFoundComponent } from '../../partials/not-found/not-found.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -18,13 +19,18 @@ export class HomeComponent implements OnInit {
 
   drugs:Drug[] =[];
   constructor(private drugService:DrugService, activatedRoute:ActivatedRoute) {
+    let drugsObservable:Observable<Drug[]>;
     activatedRoute.params.subscribe((params) => {
       if(params.searchTerm)
-        this.drugs = this.drugService.getAllDrugsBySearchTerm(params.searchTerm);
+        drugsObservable = this.drugService.getAllDrugsBySearchTerm(params.searchTerm);
       else if(params.tag)
-        this.drugs = this.drugService.getAllDrugsByTag(params.tag);
+        drugsObservable = this.drugService.getAllDrugsByTag(params.tag);
       else
-      this.drugs = drugService.getAll();
+      drugsObservable = drugService.getAll();
+
+      drugsObservable.subscribe((serverDrugs) => {
+        this.drugs = serverDrugs;
+      })
     })
     
   }

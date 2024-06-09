@@ -5,6 +5,7 @@ import { DrugService } from '../../../services/drug.service';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../../services/cart.service';
 import { NotFoundComponent } from '../../partials/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-drug-page',
@@ -19,7 +20,9 @@ export class DrugPageComponent implements OnInit{
     private cartService:CartService, private router: Router) {
     activatedRoute.params.subscribe((params) => {
       if(params.id)
-        this.drug = drugService.getDrugById(params.id);
+        drugService.getDrugById(params.id).subscribe(serverDrug => {
+          this.drug = serverDrug;
+      });
     })
   }
 
