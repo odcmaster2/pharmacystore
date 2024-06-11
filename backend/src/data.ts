@@ -67,7 +67,7 @@ export const sample_drugs: any[] = [
         imageUrl: 'assets/6.jpg',
         tags: ['Hpv', 'Uterus'],
       },
-]
+];
 
 export const sample_tags:any[] = [
   { name:'Stomach', count: 1},
@@ -81,4 +81,21 @@ export const sample_tags:any[] = [
   { name:'Heart', count: 1},
   { name:'Hpv', count: 1},
   { name:'Uterus', count: 1},
-]
+];
+
+export const sample_users: any[] = [
+  {
+    name: 'John Doe',
+    email: 'john@gmail.com',
+    password: '12345',
+    address: 'Toronto On',
+    isAdmin: true,
+  },
+  {
+    name: 'Jane Doe',
+    email: 'Jane@gmail.com',
+    password: '12345',
+    address: 'Shanghai',
+    isAdmin: false,
+  },
+];

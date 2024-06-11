@@ -1,9 +1,9 @@
 <app-not-found
-  [visible]="!drug.id"
+  [visible]="!drug"
   notFoundMessage="Product Not Found"
   resetLinkText="Back To Homepage">
 </app-not-found>
-<div *ngIf="drug.id" class="container">
+<div *ngIf="drug" class="container">
     <img [src]="drug.imageUrl" [alt]="drug.name"/>
 
     <div class="details">

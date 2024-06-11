@@ -5,6 +5,6 @@ export const DRUGS_URL = BASE_URL + '/api/drugs';
 export const DRUGS_TAGS_URL = DRUGS_URL + '/tags';
 export const DRUGS_BY_SEARCH_URL = DRUGS_URL + '/search/';
 export const DRUGS_BY_TAG_URL = DRUGS_URL + '/tag/';
-export const DRUGS_BY_ID_URL = DRUGS_URL + '/';
+export const DRUGS_BY_ID_URL = BASE_URL + '/api/drug/';
 
-
+export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
