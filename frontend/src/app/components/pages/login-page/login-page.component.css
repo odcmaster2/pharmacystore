@@ -15,5 +15,13 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    .error-list{
+      color: red;
+    }
     
-  
+    .register{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
