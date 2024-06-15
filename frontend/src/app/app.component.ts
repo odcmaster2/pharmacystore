@@ -5,6 +5,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { LoadingComponent } from './components/partials/loading/loading.component';
 
 
 
@@ -12,7 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,HomeComponent,HttpClientModule,ReactiveFormsModule, ToastrModule],
+  imports: [RouterOutlet,HeaderComponent,HomeComponent,HttpClientModule,ReactiveFormsModule, ToastrModule, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
