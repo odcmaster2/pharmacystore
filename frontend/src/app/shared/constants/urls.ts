@@ -8,3 +8,4 @@ export const DRUGS_BY_TAG_URL = DRUGS_URL + '/tag/';
 export const DRUGS_BY_ID_URL = BASE_URL + '/api/drugs/';
 
 export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
+export const USER_REGISTER_URL = BASE_URL + '/api/users/register';
