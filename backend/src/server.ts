@@ -6,6 +6,7 @@ import cors from "cors"
 import drugRouter from './routers/drug.router'
 import userRouter from './routers/user.router'
 import { dbConnect } from './configs/database.config';
+import orderRouter from './routers/order.router';
 dbConnect();
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(cors({
 
 app.use("/api/drugs", drugRouter)
 app.use("/api/users", userRouter)
+app.use("/api/orders", orderRouter)
 
 
 const port = 5000;
