@@ -7,11 +7,12 @@ import { SearchComponent } from '../../partials/search/search.component';
 import { TagsComponent } from '../../partials/tags/tags.component';
 import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 import { Observable } from 'rxjs';
+import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,RouterModule,SearchComponent,TagsComponent,NotFoundComponent],
+  imports: [CommonModule,RouterModule,SearchComponent,TagsComponent,NotFoundComponent,StarRatingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

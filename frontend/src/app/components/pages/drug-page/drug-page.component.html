@@ -13,6 +13,9 @@
           </span>
           <span class="favorite {{drug.favorite? '': 'not'}}">❤</span>
         </div>
+        <div class="rating">
+          <star-rating [stars]="drug.stars" [size]="1.8" />
+        </div>
 
         <div class="origins">
               {{drug.origins}}

@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { CartService } from '../../../services/cart.service';
 import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-drug-page',
   standalone: true,
-  imports: [CommonModule,RouterModule,NotFoundComponent],
+  imports: [CommonModule,RouterModule,NotFoundComponent,StarRatingComponent],
   templateUrl: './drug-page.component.html',
   styleUrl: './drug-page.component.css'
 })
