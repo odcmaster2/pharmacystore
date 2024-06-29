@@ -1,7 +1,5 @@
 Coding Factory Final Project
 
-github--> https://github.com/odcmaster2/pharmacystore
-
 Frontend : Angular
 Backend : Nodejs
 Database :  Mongodb
